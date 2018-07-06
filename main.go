@@ -3,13 +3,28 @@ package main
 import (
 	"log"
 
-	"github.com/matsu-chara/suburi-graphql/server"
+	"github.com/kelseyhightower/envconfig"
+	"github.com/tinrab/graphql-realtime-chat/server"
 )
 
+type config struct {
+	RedisURL string `envconfig:"REDIS_URL"`
+}
+
 func main() {
-	_, err := server.NewGraphQLServer("")
+	var cfg config
+	err := envconfig.Process("", &cfg)
 	if err != nil {
 		log.Fatal(err)
 	}
-	return
+
+	s, err := server.NewGraphQLServer(cfg.RedisURL)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	err = s.Serve("/graphql", 8080)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

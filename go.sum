@@ -1,6 +1,7 @@
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew/spew v0.0.0-20180221232628-8991bc29aa16/go.mod h1:G7mAYYxgmS0lVkHyy2hEOLQCFB0DlQFTMLWggykrydY=
+github.com/go-redis/redis v0.0.0-20180601000436-026926344199/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
 github.com/go-redis/redis v0.0.0-20180629081417-5db3ab16e503 h1:j5gf9qjV7LQc1OISfumJzv7bue+QVjDUYA9Xsg22taU=
 github.com/go-redis/redis v0.0.0-20180629081417-5db3ab16e503/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
 github.com/golang/protobuf v1.1.0 h1:0iH4Ffd/meGoXqF2lSAhZHt8X+cPgkfn/cb6Cce5Vpc=
@@ -8,6 +9,8 @@ github.com/golang/protobuf v1.1.0/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5y
 github.com/golang/protobuf/proto v0.0.0-20180622174009-9eb2c01ac278/go.mod h1:G7mAYYxgmS0lVkHyy2hEOLQCFB0DlQFTMLWggykrydY=
 github.com/gorilla/websocket v1.2.0 h1:VJtLvh6VQym50czpZzx07z/kw9EgAxI3x1ZB8taTMQQ=
 github.com/gorilla/websocket v1.2.0/go.mod h1:E7qHFY5m1UJ88s3WnNqhKjPHQ0heANvMoAMk2YaljkQ=
+github.com/kelseyhightower/envconfig v1.3.0 h1:IvRS4f2VcIQy6j4ORGIf9145T/AsUB+oY8LyvN8BXNM=
+github.com/kelseyhightower/envconfig v1.3.0/go.mod h1:cccZRl6mQpaq41TPp5QxidR+Sa3axMbJDNb//FQX6Gg=
 github.com/onsi/ginkgo v1.5.0 h1:uZr+v/TFDdYkdA+j02sPO1kA5owrfjBGCJAogfIyThE=
 github.com/onsi/ginkgo v1.5.0/go.mod h1:lLunBs/Ym6LB5Z9jYTR76FiuTmxDTDusOGeTQH+WWjE=
 github.com/onsi/gomega v1.4.0 h1:p/ZBjQI9G/VwoPrslo/sqS6R5vHU9Od60+axIiP6WuQ=
@@ -22,8 +25,12 @@ github.com/segmentio/ksuid v0.0.0-20180216234339-801bc4434082/go.mod h1:BXuJDr2b
 github.com/stretchr/testify v1.2.2 h1:bSDNvY7ZPG5RlJ8otE/7V6gMiyenm9RtJ7IUVIAoJ1w=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
 github.com/stretchr/testify/assert v0.0.0-20180609115518-f35b8ab0b5a2/go.mod h1:G7mAYYxgmS0lVkHyy2hEOLQCFB0DlQFTMLWggykrydY=
+github.com/tinrab/graphql-realtime-chat v0.0.0-20180620221113-d9f2173a4b4b h1:dBNUFGjaG8cUk1TDU3Mli0BLJm5ZP03GVz27bW/DZeA=
+github.com/tinrab/graphql-realtime-chat v0.0.0-20180620221113-d9f2173a4b4b/go.mod h1:yzx3eF4UoKxwCwTgWw3OJmdHaydyiQcU51oB+38FXzI=
+github.com/tinrab/graphql-realtime-chat/server v0.0.0-20180620221113-d9f2173a4b4b/go.mod h1:G7mAYYxgmS0lVkHyy2hEOLQCFB0DlQFTMLWggykrydY=
 github.com/tinrab/retry v1.0.0 h1:u1x0cMZszwG44AaEeH8xx3Z1guNt8syzULeOsDhzg9s=
 github.com/tinrab/retry v1.0.0/go.mod h1:PWRlqYOz5dCyuZbxKhtQ60GN6OwSLwMxnjMqof4LIso=
+github.com/vektah/gqlgen v0.0.0-20180606104319-40d9a11be108/go.mod h1:p6RS1iWLR+HVU1U2lU6vWgLjXSBtD0hRubzDWKhXFhY=
 github.com/vektah/gqlgen v0.0.0-20180706040623-325c45a40b41 h1:MCY5raqGbqeGnYKS2b9CV+QMXlg95Mm+5zM5CSOXfxw=
 github.com/vektah/gqlgen v0.0.0-20180706040623-325c45a40b41/go.mod h1:p6RS1iWLR+HVU1U2lU6vWgLjXSBtD0hRubzDWKhXFhY=
 github.com/vektah/gqlgen/graphql v0.0.0-20180706040623-325c45a40b41/go.mod h1:G7mAYYxgmS0lVkHyy2hEOLQCFB0DlQFTMLWggykrydY=
@@ -34,6 +41,7 @@ golang.org/x/net/html/charset v0.0.0-20180706051357-32a936f46389/go.mod h1:G7mAY
 golang.org/x/sync v0.0.0-20180314180146-1d60e4601c6f h1:wMNYb4v58l5UBM7MYRLPG6ZhfOqbKu7X5eyFl8ZhKvA=
 golang.org/x/sync v0.0.0-20180314180146-1d60e4601c6f/go.mod h1:RxMgew5VJxzue5/jJTE5uejpjVlOe/izrB70Jof72aM=
 golang.org/x/sync/errgroup v0.0.0-20180314180146-1d60e4601c6f/go.mod h1:G7mAYYxgmS0lVkHyy2hEOLQCFB0DlQFTMLWggykrydY=
+golang.org/x/sys v0.0.0-20180620133508-ad87a3a340fa/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/sys v0.0.0-20180706062352-ce36f3865eeb h1:Ntnx7ohMHcKlljLyqoC9d2lxCD/gujksCbAfqOPXkiY=
 golang.org/x/sys v0.0.0-20180706062352-ce36f3865eeb/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
 golang.org/x/sys/unix v0.0.0-20180706062352-ce36f3865eeb/go.mod h1:G7mAYYxgmS0lVkHyy2hEOLQCFB0DlQFTMLWggykrydY=
