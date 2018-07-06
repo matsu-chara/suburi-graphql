@@ -17,6 +17,8 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/pmezard/go-difflib/difflib v0.0.0-20160110105554-792786c7400a/go.mod h1:G7mAYYxgmS0lVkHyy2hEOLQCFB0DlQFTMLWggykrydY=
 github.com/rs/cors v1.4.0 h1:98SZukVonBOdXatRLa6GSAtp+IeOjY+nmdEZAxImXXc=
 github.com/rs/cors v1.4.0/go.mod h1:gFx+x8UowdsKA9AchylcLynDq+nNFfI8FkUZdN/jGCU=
+github.com/segmentio/ksuid v0.0.0-20180216234339-801bc4434082 h1:4oBfzhBXZcKNQDYybuxboB1WgdlgVJeCAXeeEFWKxNA=
+github.com/segmentio/ksuid v0.0.0-20180216234339-801bc4434082/go.mod h1:BXuJDr2byAiHuQaQtSKoXh1J0YmUDurywOXgB2w+OSU=
 github.com/stretchr/testify v1.2.2 h1:bSDNvY7ZPG5RlJ8otE/7V6gMiyenm9RtJ7IUVIAoJ1w=
 github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
 github.com/stretchr/testify/assert v0.0.0-20180609115518-f35b8ab0b5a2/go.mod h1:G7mAYYxgmS0lVkHyy2hEOLQCFB0DlQFTMLWggykrydY=

@@ -9,6 +9,7 @@ require (
 	github.com/onsi/gomega v1.4.0
 	github.com/pmezard/go-difflib v1.0.0
 	github.com/rs/cors v1.4.0
+	github.com/segmentio/ksuid v0.0.0-20180216234339-801bc4434082
 	github.com/stretchr/testify v1.2.2
 	github.com/tinrab/retry v1.0.0
 	github.com/vektah/gqlgen v0.0.0-20180706040623-325c45a40b41

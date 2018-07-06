@@ -13,6 +13,7 @@ import (
 	"github.com/go-redis/redis"
 	"github.com/gorilla/websocket"
 	"github.com/rs/cors"
+	"github.com/segmentio/ksuid"
 	"github.com/tinrab/retry"
 	"github.com/vektah/gqlgen/handler"
 )
@@ -62,7 +63,39 @@ func (s *graphQLServer) Serve(route string, port int) error {
 }
 
 func (s *graphQLServer) Mutation_postMessage(ctx context.Context, user string, text string) (*Message, error) {
-	return nil, nil
+	err := s.createUser(user)
+	if err != nil {
+		return nil, err
+	}
+
+	// Notify new user joined
+	s.mutex.Lock()
+	for _, ch := range s.userChannels {
+		ch <- user
+	}
+	s.mutex.Unlock()
+
+	// Create Message
+	m := Message{
+		ID:        ksuid.New().String(),
+		CreatedAt: time.Now().UTC(),
+		Text:      text,
+		User:      user,
+	}
+
+	mj, err := json.Marshal(m)
+	if err := s.redisClient.LPush("messages", mj).Err(); err != nil {
+		log.Println(err)
+		return nil, err
+	}
+
+	// Notify new message
+	s.mutex.Lock()
+	for _, ch := range s.messageChannels {
+		ch <- m
+	}
+	s.mutex.Unlock()
+	return &m, nil
 }
 func (s *graphQLServer) Query_messages(ctx context.Context) ([]Message, error) {
 	cmd := s.redisClient.LRange("messages", 0, -1)
@@ -105,4 +138,17 @@ func (s *graphQLServer) Subscription_messagePosted(ctx context.Context, user str
 }
 func (s *graphQLServer) Subscription_userJoined(ctx context.Context, user string) (<-chan string, error) {
 	return nil, nil
+}
+
+func (s *graphQLServer) createUser(user string) error {
+	if err := s.redisClient.SAdd("users", user).Err(); err != nil {
+		return err
+	}
+	// Notify new user joined
+	s.mutex.Lock()
+	for _, ch := range s.userChannels {
+		ch <- user
+	}
+	s.mutex.Unlock()
+	return nil
 }
