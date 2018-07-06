@@ -1,0 +1,5 @@
+github.com/go-redis/redis v0.0.0-20180629081417-5db3ab16e503 h1:j5gf9qjV7LQc1OISfumJzv7bue+QVjDUYA9Xsg22taU=
+github.com/go-redis/redis v0.0.0-20180629081417-5db3ab16e503/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
+github.com/vektah/gqlgen v0.0.0-20180706040623-325c45a40b41 h1:MCY5raqGbqeGnYKS2b9CV+QMXlg95Mm+5zM5CSOXfxw=
+github.com/vektah/gqlgen v0.0.0-20180706040623-325c45a40b41/go.mod h1:p6RS1iWLR+HVU1U2lU6vWgLjXSBtD0hRubzDWKhXFhY=
+github.com/vektah/gqlgen/graphql v0.0.0-20180706040623-325c45a40b41/go.mod h1:G7mAYYxgmS0lVkHyy2hEOLQCFB0DlQFTMLWggykrydY=
