@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/kelseyhightower/envconfig"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/account"
 	"github.com/tinrab/retry"
-	"github.com/tinrab/spidey/account"
 )
 
 type Config struct {

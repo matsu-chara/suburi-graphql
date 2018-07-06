@@ -3,7 +3,7 @@ package account
 import (
 	"context"
 
-	"github.com/tinrab/spidey/account/pb"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/account/pb"
 	"google.golang.org/grpc"
 )
 
