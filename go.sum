@@ -1,5 +1,9 @@
 github.com/go-redis/redis v0.0.0-20180629081417-5db3ab16e503 h1:j5gf9qjV7LQc1OISfumJzv7bue+QVjDUYA9Xsg22taU=
 github.com/go-redis/redis v0.0.0-20180629081417-5db3ab16e503/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
+github.com/gorilla/websocket v1.2.0 h1:VJtLvh6VQym50czpZzx07z/kw9EgAxI3x1ZB8taTMQQ=
+github.com/gorilla/websocket v1.2.0/go.mod h1:E7qHFY5m1UJ88s3WnNqhKjPHQ0heANvMoAMk2YaljkQ=
+github.com/rs/cors v1.4.0 h1:98SZukVonBOdXatRLa6GSAtp+IeOjY+nmdEZAxImXXc=
+github.com/rs/cors v1.4.0/go.mod h1:gFx+x8UowdsKA9AchylcLynDq+nNFfI8FkUZdN/jGCU=
 github.com/tinrab/retry v1.0.0 h1:u1x0cMZszwG44AaEeH8xx3Z1guNt8syzULeOsDhzg9s=
 github.com/tinrab/retry v1.0.0/go.mod h1:PWRlqYOz5dCyuZbxKhtQ60GN6OwSLwMxnjMqof4LIso=
 github.com/vektah/gqlgen v0.0.0-20180706040623-325c45a40b41 h1:MCY5raqGbqeGnYKS2b9CV+QMXlg95Mm+5zM5CSOXfxw=
