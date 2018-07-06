@@ -2,6 +2,7 @@
 package server
 
 import (
+	context "context"
 	"fmt"
 	"net/http"
 	"sync"
@@ -56,4 +57,21 @@ func (s *graphQLServer) Serve(route string, port int) error {
 
 	handler := cors.AllowAll().Handler(mux)
 	return http.ListenAndServe(fmt.Sprintf(":%d", port), handler)
+}
+
+func (s *graphQLServer) Mutation_postMessage(ctx context.Context, user string, text string) (*Message, error) {
+	return nil, nil
+}
+func (s *graphQLServer) Query_messages(ctx context.Context) ([]Message, error) {
+	return nil, nil
+}
+func (s *graphQLServer) Query_users(ctx context.Context) ([]string, error) {
+	return nil, nil
+}
+
+func (s *graphQLServer) Subscription_messagePosted(ctx context.Context, user string) (<-chan Message, error) {
+	return nil, nil
+}
+func (s *graphQLServer) Subscription_userJoined(ctx context.Context, user string) (<-chan string, error) {
+	return nil, nil
 }
