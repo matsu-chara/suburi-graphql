@@ -62,6 +62,7 @@ func (s *graphQLServer) Serve(route string, port int) error {
 	return http.ListenAndServe(fmt.Sprintf(":%d", port), handler)
 }
 
+// Mutation_postMessage .
 func (s *graphQLServer) Mutation_postMessage(ctx context.Context, user string, text string) (*Message, error) {
 	err := s.createUser(user)
 	if err != nil {
@@ -97,6 +98,8 @@ func (s *graphQLServer) Mutation_postMessage(ctx context.Context, user string, t
 	s.mutex.Unlock()
 	return &m, nil
 }
+
+// Query_messages .
 func (s *graphQLServer) Query_messages(ctx context.Context) ([]Message, error) {
 	cmd := s.redisClient.LRange("messages", 0, -1)
 	if cmd.Err() != nil {
@@ -119,6 +122,8 @@ func (s *graphQLServer) Query_messages(ctx context.Context) ([]Message, error) {
 	}
 	return messages, nil
 }
+
+// Query_users .
 func (s *graphQLServer) Query_users(ctx context.Context) ([]string, error) {
 	cmd := s.redisClient.SMembers("users")
 	if cmd.Err() != nil {
@@ -133,6 +138,7 @@ func (s *graphQLServer) Query_users(ctx context.Context) ([]string, error) {
 	return res, nil
 }
 
+// Subscription_messagePosted .
 func (s *graphQLServer) Subscription_messagePosted(ctx context.Context, user string) (<-chan Message, error) {
 	err := s.createUser(user)
 	if err != nil {
@@ -155,6 +161,8 @@ func (s *graphQLServer) Subscription_messagePosted(ctx context.Context, user str
 
 	return messages, nil
 }
+
+// Subscription_userJoined .
 func (s *graphQLServer) Subscription_userJoined(ctx context.Context, user string) (<-chan string, error) {
 	err := s.createUser(user)
 	if err != nil {
