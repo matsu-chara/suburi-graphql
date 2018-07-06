@@ -75,7 +75,7 @@ func (s *graphQLServer) Query_messages(ctx context.Context) ([]Message, error) {
 		log.Println(err)
 		return nil, err
 	}
-	message := []Message{}
+	messages := []Message{}
 	for _, mj := range res {
 		var m Message
 		err = json.Unmarshal([]byte(mj), &m)
