@@ -13,3 +13,7 @@ type graphQLServer struct {
 	userChannels    map[string]chan string
 	mutex           sync.Mutex
 }
+
+func NewGraphQLServer(redisURL string) (*graphQLServer, error) {
+	return nil, nil
+}

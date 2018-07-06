@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	_, err := server.NewGraphQLServer(cfg.RedisURL)
+	_, err := server.NewGraphQLServer("")
 	if err != nil {
 		log.Fatal(err)
 	}
