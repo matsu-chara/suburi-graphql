@@ -134,7 +134,25 @@ func (s *graphQLServer) Query_users(ctx context.Context) ([]string, error) {
 }
 
 func (s *graphQLServer) Subscription_messagePosted(ctx context.Context, user string) (<-chan Message, error) {
-	return nil, nil
+	err := s.createUser(user)
+	if err != nil {
+		return nil, err
+	}
+
+	// Create new channel for request
+	messages := make(chan Message, 1)
+	s.mutex.Lock()
+	s.messageChannels[user] = messages
+	s.mutex.Unlock()
+
+	// Delete channel when done
+	go func() {
+		<-ctx.Done()
+		s.mutex.Lock()
+		delete(s.messageChannels, user)
+		s.messageChannels.UnLock()
+	}()
+	return messages, nil
 }
 func (s *graphQLServer) Subscription_userJoined(ctx context.Context, user string) (<-chan string, error) {
 	return nil, nil
