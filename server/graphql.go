@@ -3,7 +3,9 @@ package server
 
 import (
 	context "context"
+	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"sync"
 	"time"
@@ -63,7 +65,26 @@ func (s *graphQLServer) Mutation_postMessage(ctx context.Context, user string, t
 	return nil, nil
 }
 func (s *graphQLServer) Query_messages(ctx context.Context) ([]Message, error) {
-	return nil, nil
+	cmd := s.redisClient.LRange("messages", 0, -1)
+	if cmd.Err() != nil {
+		log.Println(cmd.Err())
+		return nil, cmd.Err()
+	}
+	res, err := cmd.Result()
+	if err != nil {
+		log.Println(err)
+		return nil, err
+	}
+	message := []Message{}
+	for _, mj := range res {
+		var m Message
+		err = json.Unmarshal([]byte(mj), &m)
+		if err != nil {
+			return nil, err
+		}
+		messages = append(messages, m)
+	}
+	return messages, nil
 }
 func (s *graphQLServer) Query_users(ctx context.Context) ([]string, error) {
 	return nil, nil
