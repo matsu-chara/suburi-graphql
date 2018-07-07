@@ -4,4 +4,4 @@ services:
   graphql:
     build:
       context: "."
-      dockerfile: "./graphql/app.dockerfile"
+      dockerfile: "./app.dockerfile"

@@ -1,14 +1,20 @@
 version: "3.6"
 
 services:
-  catalog:
+  order:
     build:
       context: "."
-      dockerfile: "./catalog/app.dockerfile"
+      dockerfile: "./app.dockerfile"
     depends_on:
-      - "catalog_elastic_search"
+      - "order_db"
     environment:
-      DATABASE_URL: "http://catalog_elastic_search:9200"
-  catalog_elastic_search:
-    image: elasticsearch:5
+      DATABASE_URL: "postgres://spidey:123456@order_db/spidey?sslmode=disable"
+  order_db:
+    build:
+      context: "./order"
+      dockerfile: "./db.dockerfile"
+    environment:
+      POSTGRES_DB: "spidey"
+      POSTGRES_USER: "spidey"
+      POSTGRES_PASSWORD: "123456"
     restart: "unless-stopped"

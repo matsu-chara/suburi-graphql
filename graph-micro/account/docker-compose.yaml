@@ -4,7 +4,7 @@ services:
   account:
     build:
       context: "."
-      dockerfile: "./account/app.dockerfile"
+      dockerfile: "./app.dockerfile"
     depends_on:
       - "account_db"
     environment:
