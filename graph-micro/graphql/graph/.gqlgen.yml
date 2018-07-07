@@ -1,0 +1,4 @@
+schema: ../schema.graphql
+models:
+  Order:
+    model: github.com/matsu-chara/suburi-graphql/graph-micro/graphql/graph.Order
