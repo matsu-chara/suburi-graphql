@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/kelseyhightower/envconfig"
-	"github.com/tinrab/spidey/graphql/graph"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/graphql/graph"
 	"github.com/vektah/gqlgen/handler"
 )
 

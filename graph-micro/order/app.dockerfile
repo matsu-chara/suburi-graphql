@@ -1,6 +1,6 @@
 FROM golang:1.10.2-alpine3.7 AS build
 RUN apk --no-cache add gcc g++ make ca-certificates
-WORKDIR /go/src/github.com/tinrab/spidey/order
+WORKDIR /go/src/github.com/matsu-chara/suburi-graphql/graph-micro/order
 COPY vendor ../vendor
 COPY account ../account
 COPY catalog ../catalog

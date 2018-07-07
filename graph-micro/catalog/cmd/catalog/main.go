@@ -6,7 +6,7 @@ import (
 
 	"github.com/kelseyhightower/envconfig"
 	"github.com/tinrab/retry"
-	"github.com/tinrab/spidey/catalog"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/catalog"
 )
 
 type Config struct {

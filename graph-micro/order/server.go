@@ -7,9 +7,9 @@ import (
 	"log"
 	"net"
 
-	"github.com/tinrab/spidey/account"
-	"github.com/tinrab/spidey/catalog"
-	"github.com/tinrab/spidey/order/pb"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/account"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/catalog"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/order/pb"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

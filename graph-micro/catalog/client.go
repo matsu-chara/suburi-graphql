@@ -3,7 +3,7 @@ package catalog
 import (
 	"context"
 
-	"github.com/tinrab/spidey/catalog/pb"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/catalog/pb"
 	"google.golang.org/grpc"
 )
 

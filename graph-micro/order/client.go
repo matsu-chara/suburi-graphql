@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/tinrab/spidey/order/pb"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/order/pb"
 	"google.golang.org/grpc"
 )
 
