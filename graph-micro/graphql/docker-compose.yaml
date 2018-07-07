@@ -1,0 +1,7 @@
+version: "3.6"
+
+services:
+  graphql:
+    build:
+      context: "."
+      dockerfile: "./graphql/app.dockerfile"
