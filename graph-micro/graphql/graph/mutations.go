@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/tinrab/spidey/order"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/order"
 )
 
 var (

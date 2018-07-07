@@ -1,9 +1,9 @@
 //go:generate gqlgen
 package graph
 import (
-	"github.com/tinrab/spidey/account"
-	"github.com/tinrab/spidey/catalog"
-	"github.com/tinrab/spidey/order"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/account"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/catalog"
+	"github.com/matsu-chara/suburi-graphql/graph-micro/order"
 )
 
 type GraphQLServer struct {
