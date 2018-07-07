@@ -7,6 +7,8 @@ services:
       dockerfile: "./account/app.dockerfile"
     depends_on:
       - "account_db"
+    ports:
+      - "8180:8080" # for debug
     environment:
       DATABASE_URL: "postgres://spidey:123456@account_db/spidey?sslmode=disable"
 
